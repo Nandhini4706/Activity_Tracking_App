@@ -34,4 +34,13 @@ public class Activity {
     public int getHeartRate() {
         return heartRate;
     }
+
+    public void displayActivity(){
+        System.out.println("Activity Type : " + activityType);
+        System.out.println("Duration : " + duration +"Minutes");
+        System.out.println("Distance : " + distance + "km");
+        System.out.println("Calories Burned : " + caloriesBurned);
+        System.out.println("Heart Rate : " + heartRate +"bpm");
+
+    }
 }
