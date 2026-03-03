@@ -30,7 +30,7 @@ public class User {
     }
 
     public String getUserWeight() {
-        return userWeight;
+        return userWjeight;
     }
 
     public String getUserHeight() {
