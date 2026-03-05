@@ -1,8 +1,11 @@
+import Model.Activity;
+import Tracking.Activity_Track;
+
 import java.util.*;
 public class FitnessTrackerApp{
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
-
+        Activity_Track tracker=new Activity_Track();
         System.out.println("------------Welcome to Activity Tracker-----------");
         System.out.println("Enter EmailId ");
         String email = sc.nextLine();
@@ -19,6 +22,7 @@ public class FitnessTrackerApp{
         System.out.println("Exit");
         System.out.println("-------------------------------------");
         int choice=sc.nextInt();
+        sc.nextLine();
         switch(choice){
             case 1:
 
@@ -26,12 +30,15 @@ public class FitnessTrackerApp{
                 System.out.println("Enter activity type : ");
                 String s1=sc.nextLine();
                 System.out.println("Enter Duration : ");
-                String s2=sc.nextLine();
+                int s2=sc.nextInt();
                 System.out.println("Enter Distance : ");
-                String s3=sc.nextLine();
+                double s3=sc.nextDouble();
+                System.out.println("Enter Calories Burned : ");
+                double s4=sc.nextDouble();
                 System.out.println("Enter Heart Rate : ");
-                String s4=sc.nextLine();
-
+                int s5=sc.nextInt();
+                 Activity activity=new Activity(s1,s2,s3,s4,s5);
+                 tracker.addActivity(activity);
         }
     }
 }
