@@ -3,12 +3,12 @@ package Model;
 public class User {
     private int userId;
     private String userName;
-    private String userAge;
-    private String userWeight;
-    private String userHeight;
+    private int userAge;
+    private int userWeight;
+    private double userHeight;
     private String fitnessGoal;
 
-    public User(int userId,String userName, String userAge, String userWeight, String userHeight, String fitnessGoal) {
+    public User(int userId,String userName, int userAge, int userWeight, double userHeight, String fitnessGoal) {
         this.userId = userId;
         this.userName=userName;
         this.userAge=userAge;
@@ -25,15 +25,15 @@ public class User {
         return userName;
     }
 
-    public String getUserAge() {
+    public int getUserAge() {
         return userAge;
     }
 
-    public String getUserWeight() {
+    public int getUserWeight() {
         return userWeight;
     }
 
-    public String getUserHeight() {
+    public double getUserHeight() {
         return userHeight;
     }
 

@@ -36,6 +36,7 @@ public class Activity {
     }
 
     public void displayActivity(){
+
         System.out.println("Activity Type : " + activityType);
         System.out.println("Duration : " + duration +"Minutes");
         System.out.println("Distance : " + distance + "km");

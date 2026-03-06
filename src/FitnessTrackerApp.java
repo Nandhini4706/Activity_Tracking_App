@@ -1,4 +1,5 @@
 import Model.Activity;
+import Model.User;
 import Tracking.Activity_Track;
 
 import java.util.*;
@@ -25,7 +26,21 @@ public class FitnessTrackerApp{
         sc.nextLine();
         switch(choice){
             case 1:
+                System.out.println("Enter name: ");
+                String name=sc.nextLine();
+                sc.nextLine();
+                System.out.println("Enter age: ");
+                int age=sc.nextInt();
+                System.out.println("Enter weight: ");
+                int weight=sc.nextInt();
+                System.out.println("Enter height: ");
+                double height=sc.nextInt();
+                sc.nextLine();
+                System.out.println("Enter goals: ");
+                String goal=sc.nextLine();
+             User user=new User(1,name,age,weight,height,goal);
 
+             break;
             case 2:
                 System.out.println("Enter activity type : ");
                 String s1=sc.nextLine();
@@ -39,6 +54,16 @@ public class FitnessTrackerApp{
                 int s5=sc.nextInt();
                  Activity activity=new Activity(s1,s2,s3,s4,s5);
                  tracker.addActivity(activity);
+                 System.out.println("---------Activities Added SuccessFully--------");
+                 break;
+            case 3:
+                tracker.viewActivities();
+                break;
+            case 4:
+                System.out.println("--------Thank You For Visiting--------");
+                break;
+            default:
+                System.out.println("Invalid Try Choice");
         }
     }
 }
