@@ -20,10 +20,13 @@ public class FitnessTrackerApp{
         System.out.println("1.Add Details");
         System.out.println("2.Add Activity");
         System.out.println("3.View Activities");
-        System.out.println("Exit");
+        System.out.println("4.Track Your Goal ");
+        System.out.println("5.Exit");
         System.out.println("-------------------------------------");
         int choice=sc.nextInt();
         sc.nextLine();
+        User user = null;
+        Activity activity=null;
         switch(choice){
             case 1:
                 System.out.println("Enter name: ");
@@ -38,7 +41,7 @@ public class FitnessTrackerApp{
                 sc.nextLine();
                 System.out.println("Enter goals: ");
                 String goal=sc.nextLine();
-             User user=new User(1,name,age,weight,height,goal);
+                user=new User(1,name,age,weight,height,goal);
 
              break;
             case 2:
@@ -52,7 +55,7 @@ public class FitnessTrackerApp{
                 double s4=sc.nextDouble();
                 System.out.println("Enter Heart Rate : ");
                 int s5=sc.nextInt();
-                 Activity activity=new Activity(s1,s2,s3,s4,s5);
+                 activity=new Activity(s1,s2,s3,s4,s5);
                  tracker.addActivity(activity);
                  System.out.println("---------Activities Added SuccessFully--------");
                  break;
@@ -60,6 +63,14 @@ public class FitnessTrackerApp{
                 tracker.viewActivities();
                 break;
             case 4:
+
+                double bmi = user.getUserWeight()/ (user.getUserHeight() * user.getUserHeight());
+                System.out.println("Total BMI: " +bmi);
+                System.out.println("Total Distances: " +activity.getDistance() +" km");
+                System.out.println("Total Calories Burned: " +activity.getCaloriesBurned());
+                break;
+
+            case 5:
                 System.out.println("--------Thank You For Visiting--------");
                 break;
             default:
