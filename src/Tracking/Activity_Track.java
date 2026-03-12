@@ -20,7 +20,7 @@ public class Activity_Track {
     public void viewActivities(){
          for(Activity a: activities){
              a.displayActivity();
-             System.out.println("---------------------------------------------");
+             System.out.println("----------------------------------------------");
          }
     }
 }
