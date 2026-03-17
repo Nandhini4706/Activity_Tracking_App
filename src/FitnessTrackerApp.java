@@ -37,7 +37,7 @@ public class FitnessTrackerApp{
                     int age = sc.nextInt();
                     System.out.println("Enter weight: ");
                     int weight = sc.nextInt();
-                    System.out.println("Enter height: ");
+                      System.out.println("Enter height: ");
                     double height = sc.nextInt();
                     sc.nextLine();
                     System.out.println("Enter goals: ");
